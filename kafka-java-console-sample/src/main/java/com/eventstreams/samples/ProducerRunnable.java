@@ -24,7 +24,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-import java.util.Scanner;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
@@ -70,8 +69,7 @@ public class ProducerRunnable implements Runnable {
         try {
             while (!closing) {
                 String key = "key";
-                Scanner msgs = new Scanner(System.in);
-                String message = "{\"message\":\""+msgs+"message_number\":" + producedMessages + "}";
+                String message = "{\"message\":\"Aishwarya #\",\"message_number\":" + producedMessages + "}";
 
                 try {
                     // If a partition is not specified, the client will use the default partitioner to choose one.
